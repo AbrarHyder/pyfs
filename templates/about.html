@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .belowheroimg {
+            
+            margin-top: 2%;
+            padding-left: 3%;
+            padding-right: 35%;
+        }
+        .belowheroimg h2 {
+            font-size: 2.61111em;
+            line-height: 1.23404;
+            margin-bottom: .21277em;
+            color: #58585b;
+            font-family: Avenir,Arial,Helvetica,"sans-serif";
+            font-weight: 500;
+
+
+        }
+
+        .belowheroimg p {
+            color: #58585b;
+            font-family: Arial,Helvetica,"sans-serif";
+            line-height: 1.7;
+            margin-bottom: .83333em;
+            text-align: left;
+            padding-top: 2%;
+
+        }
+        
+        .knowwhat{
+            padding-top: 3%;
+            padding-bottom: 3%;
+        }
+
+        .knowwhat h2{
+            font-size: 2.61111em;
+            line-height: 1.23404;
+            margin-bottom: .21277em;
+            color: #58585b;
+            font-family: Avenir,Arial,Helvetica,"sans-serif";
+            font-weight: 500;
+            padding-left: 2%;
+            padding-right: 30%;
+            
+        }
+        .knowwhat button {
+        background-color: #18bfd4;
+        border: 1px solid #1d4e8f;
+        color: #fff;
+        display: inline-block;
+        font-family: Avenir,Arial,Helvetica,"sans-serif";
+        font-size: .77778em;
+        font-weight: 800;
+        letter-spacing: 2px;
+        line-height: 1.15;
+        padding: 1.14286em 2.14286em;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        margin-left: 2%;
+
+        }
+
+        .navbar{
+        display: flex;
+        /* background-color: #F1EFEF; */
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+        
+      }
+      .navbarpara{
+        display: flex;
+        margin-right: 20%;
+        
+        
+      }
+      .navbarparaservice{
+        
+        padding-left: 10%;
+        padding-right: 10%;
+        
+      }
+
+      .footer {
+    background-color: #f2f2f2;
+    padding: 20px 0;
+    text-align: center;
+    padding-top: 2%;
+    margin-top: 2%;
+      }
+
+    .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     }
+
+    .footer-left {
+    flex: 1;
+    text-align: left;
+    color: #9b9b9d;
+    font-size: 1.16667em;
+    font-weight: 300;
+     }
+
+    .footer-right {
+    flex: 1;
+    text-align: right;
+     }
+
+    .footer-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+     }
+
+    .footer-right ul li {
+    display: inline-block;
+    margin-right: 20px;
+     }
+
+    .footer-right ul li:last-child {
+    margin-right: 0;
+     }
+
+    .footer-right ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+     }
+
+.footer-right ul li a:hover {
+    color: #555;
+     }
+
+    .belowheroimgpara {
+        display: flex;
+        padding-left: 3%;
+        padding-top: 3%;
+    } 
+    .belowheroimgpara h3 {
+        color: #58585b;
+        font-family: Avenir,Arial,Helvetica,"sans-serif";
+        font-size: 1.88889em;
+        font-weight: 500;
+        line-height: 1.26471;
+    }
+    .belowheroimgpara p {
+        color: #58585b;
+        font-family: Arial,Helvetica,"sans-serif";
+        line-height: 1.7;
+        padding-left: 15%;
+        padding-right: 5%;
+    }
+
+    .aboutbelow{
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+
+    </style>
+
+    <title>This is Delivery Page</title>
+  </head>
+  <body>
+    {% csrf_token %} 
+    {% load static %}
+    <!-- <h1>This is advisory Page</h1>
+    <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a> -->
+
+    <div class ="navbar">
+        <div class="navbarlogo">
+          <!-- <img src="{% static 'logo.png' %}" alt=""> -->
+
+          <a href="{% url 'home' %}" >
+            <img src="{% static 'logo.png' %}" alt="Image">
+        </a>
+  
+        </div>
+        <div class="navbarpara">
+          <div class="navbarparaservice">
+          <a href="{% url 'products' %}" >Service</a>
+          </div>
+          <div class="navbarparaservice">
+          <a href="{% url 'about' %}" >About</a>
+          </div>
+          <div class="navbarparaservice">
+            <a href="{% url 'company' %}" >Company</a>
+            </div>
+          <div class="navbarparaservice">
+          <a href="{% url 'contact' %}" >Contact</a>
+          </div>
+          <!-- <a href="{% url 'logout' %}" class="btn btn-primary">Submit an Inquiry</a> -->
+          <div class="navbarparaservice">
+          <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+          </div>
+        
+        </div>
+      </div>
+
+    <div class="heroimg">
+        
+        <img src="{% static 'about.png' %}" alt="">
+    </div>
+
+    <div class="belowheroimg">
+        <h2>There’s no substitute for experience.</h2>
+        <p>Since 1986, we’ve helped solve complex technology and operations challenges for the investment management industry. With a team of dedicated consultants in North America and EMEA, we’re committed to working with asset managers and asset servicers globally on projects of every scope. From guiding complete business transformation programs to on-the-ground delivery, our team is equipped to fulfill any strategic or tactical need.</p>
+    </div>
+
+    <!-- <hr color="#79E0EE" width="20%" > -->
+    <div class ="belowheroimgpara">
+        <h3>Experience</h3>
+        <p>When your investment operations are on the line, you can’t afford to take a gamble. You need proven strategies, actionable ideas, and peer insight. Our consultants have an average of 18 years’ industry experience working in roles from tactical operations to executive oversight at leading investment management firms. With access to this deep pool of knowledge, you’re positioned to anticipate challenges, design a strategy that works, and achieve your current and future goals.</p>
+        
+
+    </div>
+    <hr color="#79E0EE" width="20%">
+
+    <div class ="belowheroimgpara">
+        <h3>Domain Knowledge</h3>
+        <p>You don’t have time to get a consulting partner up-to-speed when you’re undertaking a new program or assessing your operations. We focus solely on technology and operations for asset management, so our consultants are always ready to hit the ground running. An in-depth understanding of your business helps us ask the right questions and solve difficult problems so you’re reaping the benefits of insights and efficiency from day one.</p>
+        
+
+    </div>
+    <hr color="#79E0EE" width="20%">
+
+    <!-- <div class ="belowheroimgpara">
+        <h3>Breadth Approach</h3>
+        <p>Working with multiple stakeholders and a patchwork of consulting teams can make an ambitious project unwieldy. We streamline the process by offering advisory and delivery services across every facet of the investment management lifecycle. Our dedicated program management team can take your project from inception through post-production, and staff any resource needs along the way. </p>
+        
+
+    </div>
+    <hr color="#79E0EE" width="20%"> -->
+
+    <!-- <div class ="belowheroimgpara">
+        <h3>Relationships</h3>
+        <p>Your consultants should be an extension of your team. By viewing every engagement as a partnership, we’ve forged longstanding relationships with many of the top firms in asset management and asset servicing. Guided by the view that client success is our success, we go above and beyond to deliver results. We’re proud that this ironclad reputation for exceeding expectations is reflected in our repeat partnerships and strong client references.</p>
+        
+
+    </div>
+    <hr color="#79E0EE" width="20%"> -->
+
+    <div class ="belowheroimgpara">
+        <h3>Pragmatic Approach</h3>
+        <p>You need results, not just ideas. For the past three decades, we’ve been on the ground partnering with our clients on programs of every scale, building a peerless view on what works and what doesn’t. When you partner with us, you can rely on our consultants to deliver recommendations that are practical and proven.</p>
+        
+
+    </div>
+    <hr color="#79E0EE" width="20%">
+
+    <div class="aboutbelow">
+        <img src="{% static 'aboutbelow.png' %}" alt="">
+    </div>
+
+    <div class ="knowwhat">
+        <h2> Know what you need? Submit your request for information here. </h2>
+        <button>SUBMIT INQUIRY</button>
+    </div>  
+
+    <div class ="insight">
+        <img src="{% static 'isights.png' %}" alt="">
+      </div>
+
+
+      <div class="footer">
+        <div class="footer-container">
+          <div class="footer-left">
+              <p>&copy; 2024 Citisoft. All Rights Reserved.</p>
+          </div>
+          <div class="footer-right">
+              <ul>
+                  <li><a href="#">Terms of Use</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Notice at Collection</a></li>
+              </ul>
+          </div>
+        </div>
+        </div>  
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
